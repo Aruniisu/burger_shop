@@ -20,7 +20,7 @@ const Footer = () => {
           >
             <div className="footer-logo">
               <FaHamburger className="burger-icon" />
-              <span>Burger Bliss</span>
+              <span>Burger Shop</span>
             </div>
             <p className="footer-description">
               Serving the juiciest, most delicious burgers. 
