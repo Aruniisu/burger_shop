@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "burger-shopp/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "burger-shopp/build"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "burger-shopp/$1" }
+  ]
+}
