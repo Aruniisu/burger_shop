@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaHamburger, FaShoppingCart, FaTimes, FaBars } from 'react-icons/fa';
 import './Header.scss';
