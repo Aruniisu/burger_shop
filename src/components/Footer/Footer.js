@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube, FaHamburger } from 'reac
 import './Footer.scss';
 
 const Footer = () => {
-  // Get the current year for the copyright notice
+  // Dynamically display the current year in the copyright notice
   const currentYear = new Date().getFullYear();
 
   return (
