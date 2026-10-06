@@ -1,10 +1,10 @@
-name: CI/CD
+name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   lint:
@@ -12,13 +12,13 @@ jobs:
     continue-on-error: true
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Node
+      - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: '20'
       - name: Install dependencies
-        run: npm install
-      - name: Lint
+        run: npm ci
+      - name: Run lint
         run: npm run lint || true
 
   test:
@@ -26,13 +26,13 @@ jobs:
     continue-on-error: true
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Node
+      - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: '20'
       - name: Install dependencies
-        run: npm install
-      - name: Test
+        run: npm ci
+      - name: Run tests
         run: npm test || true
 
   build:
@@ -40,12 +40,12 @@ jobs:
     needs: [lint, test]
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Node
+      - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: '20'
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Build
         run: npm run build
 
@@ -55,4 +55,4 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Deploy placeholder
-        run: echo "Deploy step"
+        run: echo "Deploy step would run here"
