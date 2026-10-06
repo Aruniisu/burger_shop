@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FaQuoteLeft, FaStar } from 'react-icons/fa';
 import './Testimonials.scss';
@@ -6,21 +5,24 @@ import './Testimonials.scss';
 const testimonials = [
   {
     id: 1,
-    
+    name: 'John Doe',
+    image: 'https://via.placeholder.com/50',
     role: 'Food Blogger',
     comment: 'The best burgers in town! The Classic Bliss is my absolute favorite. Juicy, flavorful, and always cooked to perfection.',
     rating: 5,
   },
   {
     id: 2,
-
+    name: 'Jane Smith',
+    image: 'https://via.placeholder.com/50',
     role: 'Regular Customer',
-    comment: 'I come here every Friday with my family. The kids love the cheesy burgers, and I\'m addicted to the Spicy Fire!',
+    comment: "I come here every Friday with my family. The kids love the cheesy burgers, and I'm addicted to the Spicy Fire!",
     rating: 4,
   },
   {
     id: 3,
-    
+    name: 'Alex Green',
+    image: 'https://via.placeholder.com/50',
     role: 'Vegetarian',
     comment: 'As a vegetarian, I appreciate having such a delicious option. The Veggie Wonder is packed with flavor and texture!',
     rating: 5,
@@ -33,10 +35,9 @@ const Testimonials = () => {
       <div className="container">
         <h2 className="section-title">What Our Customers Say</h2>
         <p className="section-subtitle">Don't just take our word for it</p>
-        
         <div className="testimonials-grid">
           {testimonials.map((testimonial, index) => (
-            <motion.div 
+            <motion.div
               key={testimonial.id}
               className="testimonial-card"
               initial={{ opacity: 0, y: 50 }}
