@@ -1,17 +1,14 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube, FaHamburger } from 'react-icons/fa';
 import './Footer.scss';
 
 const Footer = () => {
-  // Dynamically display the current year in the copyright notice
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
-          {/* About Section */}
           <motion.div
             className="footer-about"
             initial={{ opacity: 0, y: 50 }}
@@ -44,7 +41,6 @@ const Footer = () => {
             </div>
           </motion.div>
         </div>
-        {/* Footer bottom with dynamic year */}
         <div className="footer-bottom">
           <p>© {currentYear} Burger Shop. All rights reserved.</p>
         </div>
